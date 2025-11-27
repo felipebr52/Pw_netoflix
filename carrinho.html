@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - Filmow</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header-simples">
+        <nav>
+            <div class="logo"><img src="./img/logo.png" alt="Filmow"></div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-interno">
+        <section class="container-interno">
+            <h1 class="titulo-pagina"><i class="fa-solid fa-cart-shopping"></i> Seu Carrinho</h1>
+
+            <div class="carrinho-box">
+                <table class="tabela-carrinho">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th class="center">Qtd</th>
+                            <th>Preço</th>
+                            <th class="center">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-carrinho">
+                        </tbody>
+                </table>
+
+                <div class="carrinho-resumo">
+                    <p>Total: <strong>R$ <span id="total-valor">0,00</span></strong></p>
+                    <button onclick="alert('Compra realizada com sucesso!')" class="btn-finalizar">
+                        Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Produzido e desenvolvido por Gordelas &copy;</p>
+    </footer>
+
+    <script src="js/carrinho.js"></script>
+    <script>
+        // Carrega o carrinho assim que abre a página
+        window.onload = carregarCarrinho;
+    </script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+/* ================================================= */
+/* ===              MAIN.CSS - FINAL             === */
+/* ================================================= */
+
+/* --- IMPORTAÇÃO DE FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans:wght@300;500;700&family=Poppins:ital,wght@1,500&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(19, 19, 19);
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* ================================================= */
+/* ===              CABEÇALHO (HEADER)           === */
+/* ================================================= */
+header {
+    background-image: url(../img/filmes.png); 
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+/* Menu de Navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    height: 80px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a, nav ul li i {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8b26cf;
+}
+
+/* Conteúdo do Banner */
+.header-content {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    color: #ddd;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Botões */
+ul.btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.btn_start, .btn_plan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn_start { background-color: royalblue; }
+.btn_plan { background-color: #8b26cf; }
+
+.btn_start:hover, .btn_plan:hover { transform: scale(1.05); }
+
+
+/* ================================================= */
+/* ===       SEÇÃO: CARACTERÍSTICAS              === */
+/* ================================================= */
+.categorias__titulo {
+    width: 100%;
+    min-height: 600px; 
+    padding: 50px 0;
+    display: grid;
+    background-color: rgb(19, 19, 19);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+}
+
+.caracteristicas__titulo {
+    grid-column: 1/9;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+[class*="caracteristicas__bloco"] {
+    background-color: #8b26cf;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+/* Grid Posicionamento */
+.caracteristicas__bloco1 { grid-column: 2/5; grid-row: 2; }
+.caracteristicas__bloco2 { grid-column: 5/8; grid-row: 2; }
+.caracteristicas__bloco3 { grid-column: 2/5; grid-row: 3; }
+.caracteristicas__bloco4 { grid-column: 5/8; grid-row: 3; }
+
+
+/* ================================================= */
+/* ===           SEÇÃO: FILMES (ATROPOS)         === */
+/* ================================================= */
+.movie {
+    width: 100%;
+    padding: 50px 0;
+    background: linear-gradient(90deg, rgb(65, 105, 225) 1%, #8b26cf 100%);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+
+.movie__title {
+    grid-column: 1/13;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.atropos {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Posicionamento dos Cards no Grid Desktop */
+.my-atropos1 { grid-column: 2/5; grid-row: 2; }
+.my-atropos2 { grid-column: 5/9; grid-row: 2; }
+.my-atropos3 { grid-column: 9/12; grid-row: 2; }
+.my-atropos4 { grid-column: 2/5; grid-row: 3; }
+.my-atropos5 { grid-column: 5/9; grid-row: 3; }
+.my-atropos6 { grid-column: 9/12; grid-row: 3; }
+
+/* Configuração da Biblioteca Atropos */
+.atropos-inner { border-radius: 10px; overflow: hidden; transform: translate3d(0,0,0); width: 100%; height: 100%; }
+.atropos-inner img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 10px; }
+.atropos-highlight { opacity: 0.5; }
+.atropos { position: relative; display: block; perspective: 1200px; transform: translate3d(0, 0, 0); }
+.atropos-rotate-touch, .atropos-rotate-scroll-x, .atropos-rotate-scroll-y { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.atropos-rotate-touch-scroll-y { touch-action: pan-y; }
+.atropos-rotate-touch-scroll-x { touch-action: pan-x; }
+.atropos-rotate-touch { touch-action: none; }
+.atropos-scale, .atropos-rotate { width: 100%; height: 100%; transform-style: preserve-3d; transition-property: transform; display: block; }
+.atropos-shadow, .atropos-highlight { position: absolute; pointer-events: none; transition-property: transform, opacity; display: block; opacity: 0; }
+.atropos-shadow { z-index: -1; background: #000; left: 0; top: 0; width: 100%; height: 100%; filter: blur(30px); }
+.atropos-highlight { left: -50%; top: -50%; width: 200%; height: 200%; background-image: radial-gradient(circle at 50%, rgba(255, 255, 255, 0.25), transparent 50%); z-index: 0; }
+.atropos-rotate { position: relative; }
+.atropos-inner { width: 100%; height: 100%; position: relative; overflow: hidden; transform-style: preserve-3d; transform: translate3d(0, 0, 0); display: block; }
+.atropos-active { z-index: 1; }
+.atropos-active .atropos-shadow { opacity: 1 !important; }
+[data-atropos-offset] { transition-property: transform; }
+[data-atropos-opacity] { transition-property: opacity; }
+[data-atropos-offset][data-atropos-opacity] { transition-property: transform, opacity; }
+
+
+/* ================================================= */
+/* ===           SEÇÃO: CATÁLOGO RÁPIDO          === */
+/* ================================================= */
+#catalogo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #0b0b0b;
+}
+
+#catalogo h2 {
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.catalogo-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card do Filme */
+.movie-hover-card {
+    position: relative;
+    width: 160px;
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin: 10px;
+}
+
+.movie-img { width: 100%; height: 100%; object-fit: cover; transition: all 0.3s ease; }
+
+.movie-info-overlay {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.6));
+    padding: 20px 15px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    opacity: 0; transition: all 0.3s ease;
+}
+
+.movie-hover-card:hover { transform: scale(1.1); z-index: 10; box-shadow: 0 10px 25px rgba(139, 38, 207, 0.6); }
+.movie-hover-card:hover .movie-img { transform: scale(1.1); filter: brightness(0.6); }
+.movie-hover-card:hover .movie-info-overlay { opacity: 1; }
+
+.movie-title { color: white; font-size: 1rem; margin-bottom: 8px; line-height: 1.2; }
+.movie-rating { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; color: white; margin-bottom: 10px; width: fit-content; }
+.rating-18 { background-color: #e74c3c; }
+.rating-16 { background-color: #d35400; }
+.rating-14 { background-color: #e67e22; }
+.rating-12 { background-color: #f1c40f; color: black; }
+.rating-livre { background-color: #2ecc71; }
+.movie-synopsis { color: #ddd; font-size: 0.85rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+
+
+/* ================================================= */
+/* ===             SEÇÃO: PLANOS                 === */
+/* ================================================= */
+#planos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #141414;
+    margin-bottom: 50px;
+}
+
+.planos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.plan-card {
+    background: #1f1f1f;
+    width: 280px;
+    min-height: 150px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    position: relative;
+    border: 1px solid #333;
+    display: flex; flex-direction: column; align-items: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.plan-header h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
+.plan-header i { font-size: 2rem; color: #8b26cf; margin-bottom: 10px; }
+.plan-details { opacity: 0; transform: translateY(20px); transition: 0.4s ease; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.price { font-size: 2rem; color: white; font-weight: bold; margin: 15px 0; }
+.plan-details ul { list-style: none; padding: 0; color: #ccc; text-align: left; margin-bottom: 20px; }
+.plan-details li { margin-bottom: 8px; }
+.btn-assinar { background-color: #8b26cf; color: white; padding: 10px 30px; border-radius: 20px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
+
+.plan-card:hover { min-height: 400px; background: #252525; border-color: #8b26cf; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.plan-card:hover .plan-details { opacity: 1; transform: translateY(0); }
+.plan-card.destaque { border: 2px solid #8b26cf; }
+.tag-popular { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #8b26cf; color: white; padding: 5px 15px; font-size: 0.8rem; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; font-weight: bold; }
+
+
+/* ================================================= */
+/* ===              FOOTER                       === */
+/* ================================================= */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: auto;
+    width: 100%;
+}
+
+
+/* ================================================= */
+/* ===            MOBILE RESPONSIVO              === */
+/* ================================================= */
+@media (max-width: 768px) {
+    /* Layout Vertical */
+    .categorias__titulo, .movie, header {
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+        grid-template-columns: none !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Menu */
+    nav { flex-direction: column; height: auto; padding: 20px 0; background: rgba(0,0,0,0.95); }
+    nav ul { flex-wrap: wrap; justify-content: center; margin-top: 15px; }
+
+    /* Ajuste de Textos */
+    h1 { font-size: 2rem; margin-top: 20px; }
+    h2 { font-size: 1.2rem; }
+    ul.btn { margin-bottom: 60px; }
+
+    /* Características */
+    [class*="caracteristicas__bloco"] { width: 100%; margin-bottom: 20px; grid-column: auto !important; grid-row: auto !important; }
+
+    /* Filmes (Atropos) */
+    .my-atropos1, .my-atropos2, .my-atropos3, .my-atropos4, .my-atropos5, .my-atropos6 {
+        grid-column: auto !important; grid-row: auto !important;
+        width: 100%; max-width: 320px; margin-bottom: 40px !important;
+    }
+
+    /* Catálogo Mobile */
+    .catalogo-grid { gap: 15px; }
+    .movie-hover-card { width: 140px; height: 210px; }
+
+    /* Planos Mobile */
+    .plan-card { width: 90%; min-height: auto; height: auto; margin-bottom: 20px; padding-bottom: 30px; }
+    .plan-details { opacity: 1; transform: none; display: flex; }
+    
+    /* Prevenção de rolagem lateral */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+}
+
+
+/* ================================================= */
+/* ===    PÁGINAS INTERNAS (CARRINHO E USUÁRIO)  === */
+/* ================================================= */
+.header-simples {
+    min-height: auto !important;
+    background-image: none !important;
+    background-color: #0b0b0b !important;
+    padding-bottom: 0 !important;
+}
+
+.main-interno {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.container-interno { width: 100%; max-width: 900px; }
+.titulo-pagina { color: white; font-size: 2rem; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 15px; }
+
+/* Estilos da Tabela e Carrinho */
+.carrinho-box { background-color: #141414; padding: 30px; border-radius: 10px; border: 1px solid #333; }
+.tabela-carrinho { width: 100%; border-collapse: collapse; color: white; }
+.tabela-carrinho th { text-align: left; padding: 15px; border-bottom: 2px solid #8b26cf; color: #bbb; }
+.tabela-carrinho td { padding: 15px; border-bottom: 1px solid #333; vertical-align: middle; }
+.tabela-carrinho img { width: 50px; border-radius: 5px; margin-right: 15px; vertical-align: middle; }
+.center { text-align: center; }
+
+.btn-qtd { background: #333; color: white; border: none; width: 25px; height: 25px; border-radius: 50%; cursor: pointer; }
+.btn-qtd:hover { background: #8b26cf; }
+.carrinho-resumo { text-align: right; margin-top: 30px; color: white; font-size: 1.2rem; }
+.btn-finalizar { background: #00c853; color: white; border: none; padding: 10px 30px; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 15px; }
+.btn-finalizar:hover { background: #009624; }
+
+/* Estilos do Perfil */
+.perfil-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; }
+.perfil-card, .perfil-dados { background-color: #141414; padding: 30px; border-radius: 10px; border: 1px solid #333; color: white; }
+.perfil-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.avatar-box img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #8b26cf; margin-bottom: 15px; }
+.badge-assinante { background: #8b26cf; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; margin-top: 10px; font-weight: bold; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: #ccc; }
+.input-dark { width: 100%; padding: 12px; background: #0b0b0b; border: 1px solid #333; border-radius: 5px; color: white; font-size: 1rem; }
+.input-dark:focus { border-color: #8b26cf; outline: none; }
+.input-dark.disabled { color: #666; cursor: not-allowed; }
+.btn-salvar { background: #8b26cf; color: white; border: none; padding: 12px 25px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; }
+.btn-salvar:hover { background: #6a1b9a; }
+
+@media (max-width: 768px) {
+    .perfil-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================================= */
+/* ===              PÁGINA SOBRE                 === */
+/* ================================================= */
+.sobre-content { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; background-color: #141414; padding: 40px; border-radius: 10px; border: 1px solid #333; }
+.sobre-texto { flex: 2; color: #ccc; font-size: 1.1rem; line-height: 1.6; }
+.sobre-texto h2 { color: white; margin-bottom: 20px; font-size: 1.8rem; }
+.sobre-texto strong { color: #8b26cf; }
+.sobre-img { flex: 1; display: flex; justify-content: center; }
+.sobre-img img { max-width: 100%; height: auto; filter: drop-shadow(0 0 10px rgba(139, 38, 207, 0.5)); animation: flutuar 3s ease-in-out infinite; }
+
+@keyframes flutuar { 
+    0% { transform: translateY(0px); } 
+    50% { transform: translateY(-15px); } 
+    100% { transform: translateY(0px); } 
+}
+
+/* Equipe */
+.team-section { text-align: center; margin-top: 50px; }
+.team-section h2 { color: white; margin-bottom: 30px; font-size: 2rem; }
+.team-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.team-card { background: #1f1f1f; padding: 30px; border-radius: 15px; width: 200px; text-align: center; border: 1px solid #333; transition: 0.3s; }
+.team-card:hover { transform: translateY(-10px); border-color: #8b26cf; box-shadow: 0 5px 20px rgba(139, 38, 207, 0.3); }
+.team-card .avatar { width: 80px; height: 80px; background: #333; border-radius: 50%; margin: 0 auto 15px auto; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: #8b26cf; border: 2px solid #8b26cf; }
+.team-card h3 { color: white; font-size: 1.2rem; margin-bottom: 5px; }
+.team-card p { color: #888; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}

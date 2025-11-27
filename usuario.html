@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - Filmow</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header-simples">
+        <nav>
+            <div class="logo"><img src="./img/logo.png" alt="Filmow"></div>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar</a></li>
+                <li><a href="index.html" style="color: red;"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-interno">
+        <section class="container-interno">
+            <h1 class="titulo-pagina"><i class="fa-solid fa-user-circle"></i> Meu Perfil</h1>
+
+            <div class="perfil-grid">
+                
+                <div class="perfil-card">
+                    <div class="avatar-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Avatar">
+                    </div>
+                    <h2>Usuário Filmow</h2>
+                    <p class="badge-assinante">Assinante Premium</p>
+                </div>
+
+                <div class="perfil-dados">
+                    <h3>Dados Pessoais</h3>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Dados atualizados!');">
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" value="Aluno Etec" class="input-dark">
+                        </div>
+
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" value="aluno@etec.sp.gov.br" class="input-dark">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Plano Atual</label>
+                            <input type="text" value="Plano Padrão - R$ 39,90/mês" disabled class="input-dark disabled">
+                        </div>
+
+                        <button class="btn-salvar">Salvar Alterações</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Produzido e desenvolvido por Gordelas &copy;</p>
+    </footer>
+
+</body>
+</html>
